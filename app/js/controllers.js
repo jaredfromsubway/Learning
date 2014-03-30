@@ -2,8 +2,10 @@
 
 /* Controllers */
 angular.module('myAppControllers', [])
-    .controller('state2Controller', ['$scope', function($scope) {
+    .controller('state2Controller', ['$scope', 'Widget', function($scope, Widget) {
         $scope.msg = 'weeeee';
+        $scope.testData = Widget.query();
+console.log($scope.testData);
     }])
     .controller('state3Controller', ['$scope', '$stateParams', function($scope, $stateParams){
         $scope.secondmsg = 'uhhhh';
