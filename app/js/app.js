@@ -27,13 +27,16 @@ angular.module('myApp', [
             })
             .state('state3.detail', {
                 url: '/{testid}',
-                templateUrl: 'partials/partial4.html',
-                controller: 'state3DetailController'
-//                views: {
-//                    'detail': {
-//                        url: '/{id}',
-//                        templateUrl: 'partials/partial4.html'
-//                    }
-//                }
+                views: {
+                    detail: {
+                        controller: 'state3DetailController',
+                        templateUrl: 'partials/partial4.html'
+                    },
+                    extradetail: {
+                        controller: 'state3DetailController',
+                        templateUrl: 'partials/partial5.html'
+                    }
+
+                }
             })
     }]);
