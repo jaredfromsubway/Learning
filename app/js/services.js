@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('MyAppServices', ['ngResource'])
-    .factory('Widget', ['$resource', function($resource){
-        return $resource('data/randomstuff.json', {}, {
+    .factory('Widget', ['$resource', '$stateParams', function($resource, $stateParams){
+        return $resource('data/randomstuff:stuffID.json', {}, {
             query: {method:'GET'}
         });
     }]);

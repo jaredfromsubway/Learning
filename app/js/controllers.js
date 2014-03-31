@@ -2,10 +2,12 @@
 
 /* Controllers */
 angular.module('myAppControllers', [])
-    .controller('state2Controller', ['$scope', 'Widget', function($scope, Widget) {
+    .controller('state2Controller', ['$scope','$stateParams', function($scope, $stateParams) {
         $scope.msg = 'weeeee';
-        $scope.testData = Widget.query();
-console.log($scope.testData);
+    }])
+    .controller('state2DetailController', ['$scope','$stateParams', 'Widget', function($scope, $stateParams, Widget) {
+        $scope.testData = Widget.query({stuffID: $stateParams.anotherid});
+        $scope.checkItID = $stateParams.anotherid;
     }])
     .controller('state3Controller', ['$scope', '$stateParams', function($scope, $stateParams){
         $scope.secondmsg = 'uhhhh';

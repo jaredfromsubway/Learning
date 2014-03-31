@@ -21,6 +21,11 @@ angular.module('myApp', [
                 templateUrl: "partials/partial2.html",
                 controller: 'state2Controller'
             })
+            .state('state2.detail', {
+                url: "/{anotherid}",
+                templateUrl: "partials/partial2detail.html",
+                controller: 'state2DetailController'
+            })
             .state('state3', {
                 url: '/state3',
                 templateUrl: 'partials/partial3.html',
