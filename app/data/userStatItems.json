@@ -1,0 +1,20 @@
+[
+    {
+        "cupsConsumed": 11,
+        "potsBrewed": 7,
+        "firstName": "Justin",
+        "lastName": "Fox"
+    },
+    {
+        "cupsConsumed": 14,
+        "potsBrewed": 10,
+        "firstName": "Kyle",
+        "lastName": "McGuire"
+    },
+    {
+        "cupsConsumed": 12,
+        "potsBrewed": 14,
+        "firstName": "Stu",
+        "lastName": "Bowring"
+    }
+]

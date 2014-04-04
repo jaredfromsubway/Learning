@@ -1,48 +1,26 @@
 'use strict';
 
-
-// Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('coffeeTime', [
     'ui.router',
-    'MyAppServices',
-    'myAppControllers',
-     'ui.bootstrap'
-
+    'ui.bootstrap',
+    'coffeeTimeControllers',
+    'coffeeTimeServices'
     ])
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/state1");
+        $urlRouterProvider.otherwise('/home');
         $stateProvider
-            .state('state1', {
-                url: "/state1",
-                templateUrl: "partials/partial1.html"
-             })
-            .state('state2', {
-                url: "/state2",
-                templateUrl: "partials/partial2.html",
-                controller: 'state2Controller'
+            .state('home', {
+                abstract: true,
+                url: '/home',
+                templateUrl: 'partials/home.html'
             })
-            .state('state2.detail', {
-                url: "/{anotherid}",
-                templateUrl: "partials/partial2detail.html",
-                controller: 'state2DetailController'
-            })
-            .state('state3', {
-                url: '/state3',
-                templateUrl: 'partials/partial3.html',
-                controller: 'state3Controller'
-            })
-            .state('state3.detail', {
-                url: '/{testid}',
+            .state('home.details', {
+                url: '', //active when home is active
                 views: {
-                    detail: {
-                        controller: 'state3DetailController',
-                        templateUrl: 'partials/partial4.html'
-                    },
-                    extradetail: {
-                        controller: 'state3DetailController',
-                        templateUrl: 'partials/partial5.html'
+                   'userStatList': {
+                        templateUrl: 'partials/userStatList.html',
+                        controller: 'userStatListController'
                     }
-
                 }
             })
     }]);
