@@ -11,6 +11,11 @@ angular.module('coffeeTime', [
         $stateProvider
             .state('home', {
                 url: '/home',
+                resolve: {
+                    userStatList: ['userStatListService', function (userStatListService) {
+                        return userStatListService.read().$promise;
+                    }]
+                },
                 views: {
                     '': {
                         templateUrl: 'partials/home.html'
@@ -20,5 +25,8 @@ angular.module('coffeeTime', [
                         controller: 'userStatListController'
                     }
                 }
+            })
+            .state('about', {
+                templateUrl: 'partials/about.html'
             })
     }]);

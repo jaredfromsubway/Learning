@@ -2,7 +2,11 @@
 
 angular.module('coffeeTimeControllers', [])
     .controller('userStatListController', ['$scope','$stateParams', 'userStatList', function($scope, $stateParams, userStatList){
-        $scope.userStatItems = userStatList.read();
+        angular.forEach(userStatList, function (value, key) {
+
+            userStatList[key].fullName = userStatList[key].firstName + ' ' + userStatList[key].lastName;
+        });
+        $scope.userStatItems = userStatList;
     }])
     .controller('userStatItemController', ['$scope','$stateParams', 'userStatItem', function($scope, $stateParams, userStatItem){
         $scope.userStatItem = userStatItem.read({userID: 1}, function(){

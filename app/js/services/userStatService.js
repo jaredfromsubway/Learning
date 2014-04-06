@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('coffeeTimeServices', ['ngResource'])
-    .factory('userStatList', ['$resource', '$stateParams', function($resource, $stateParams){
+    .factory('userStatListService', ['$resource', '$stateParams', function($resource, $stateParams){
         return $resource('data/userStatItems.json', {}, {
             read: {method:'GET', isArray: true}
         });

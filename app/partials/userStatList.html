@@ -1,7 +1,6 @@
-<div>List:
-<ul>
-    <li>testing</li>
-    <li ng-repeat="userStatItem in userStatItems">{{userStatItem.firstName}}</li>
-    //@todo make this a directive
-</ul>
+<div class="list-group">
+    <span class="list-group-item" ng-repeat="userStatItem in userStatItems">
+        <h4 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h4>
+        <p class="list-group-item-text">Hey look at all this stuff that can show up here in attributes and whatnot whoooooo</p>
+    </span>
 </div>
