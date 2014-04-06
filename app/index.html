@@ -1,14 +1,45 @@
 <!doctype html>
 <html lang="en" ng-app="coffeeTime">
 <head>
-  <meta charset="utf-8">
-  <title>Coffee Thing</title>
-  <link rel="stylesheet" href="css/app.css"/>
-  <link rel="stylesheet" href="css/bootstrap.css"/>
-  <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CoffeeTime</title>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+
 </head>
 <body>
-  <div ui-view></div>
+
+<div class="container">
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <span class="nav navbar-nav navbar-right"></span>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://getbootstrap.com/examples/navbar/">login / signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <h1 class="text-center">CoffeeTime</h1>
+    </div>
+    <div class ="row">
+        <div class="col-md-8">SOME PICTURE CONTENT</div>
+        <div class="col-md-4" ui-view></div>
+    </div>
+</div>
 
   <script src="../bower_components/angular/angular.js"></script>
   <script src="js/lib/ui-bootstrap.min.js"></script>
