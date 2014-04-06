@@ -10,14 +10,12 @@ angular.module('coffeeTime', [
         $urlRouterProvider.otherwise('/home');
         $stateProvider
             .state('home', {
-                abstract: true,
                 url: '/home',
-                templateUrl: 'partials/home.html'
-            })
-            .state('home.details', {
-                url: '', //active when home is active
                 views: {
-                   'userStatList': {
+                    '': {
+                        templateUrl: 'partials/home.html'
+                    },
+                    'userStatList@home': {
                         templateUrl: 'partials/userStatList.html',
                         controller: 'userStatListController'
                     }
