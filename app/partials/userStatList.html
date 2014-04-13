@@ -1,6 +1,40 @@
 <div class="list-group">
-    <span class="list-group-item" ng-repeat="userStatItem in userStatItems">
+    <span class="list-group-item user-stat-item" ng-repeat="userStatItem in userStatItems">
         <h4 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h4>
-        <p class="list-group-item-text">Hey look at all this stuff that can show up here in attributes and whatnot whoooooo</p>
+        <table>
+            <tr>
+                <td>
+                    <img class="user-stat-avatar img-rounded" src="http://f.thumbs.redditmedia.com/VJbOG83hmKRL1yeq.jpg" alt="avatar">
+                </td>
+                <td class="user-stat-details-area">
+                    <table>
+                        <tr>
+                            <td class="user-stat-label">Cups drank:</td>
+                            <td class="user-stat-value">4</td>
+                        </tr>
+                        <tr>
+                            <td class="user-stat-label">Pots brewed:</td>
+                            <td class="user-stat-value">4</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="user-stat-health ">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    </p>
+                </td>
+            </tr>
+        </table>
     </span>
 </div>

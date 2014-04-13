@@ -2,3 +2,34 @@
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+.user-stat-item {
+    padding: 10px;
+}
+.user-stat-avatar {
+    width: 66px;
+    height: 66px;
+}
+td.user-stat-details-area {
+    padding-left: 10px;
+    width:100%;
+}
+td.user-stat-details-area > table {
+    width:100%;
+}
+td.user-stat-label {
+    font-weight: bold;
+    float: right;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+td.user-stat-value {
+    width: 100%;
+}
+td.user-stat-health {
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+    /*padding-top: 5px;*/
+}
