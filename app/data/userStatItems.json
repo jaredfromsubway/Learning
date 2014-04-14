@@ -3,18 +3,21 @@
         "cupsConsumed": 11,
         "potsBrewed": 7,
         "firstName": "Justin",
-        "lastName": "Fox"
+        "lastName": "Fox",
+        "health": 74
     },
     {
         "cupsConsumed": 14,
         "potsBrewed": 10,
         "firstName": "Kyle",
-        "lastName": "McGuire"
+        "lastName": "McGuire",
+        "health": 100
     },
     {
         "cupsConsumed": 12,
         "potsBrewed": 14,
         "firstName": "Stu",
-        "lastName": "Bowring"
+        "lastName": "Bowring",
+        "health": 0
     }
 ]

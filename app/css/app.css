@@ -27,9 +27,12 @@ td.user-stat-value {
     width: 100%;
 }
 td.user-stat-health {
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     height: 100%;
     width: 100%;
-    /*padding-top: 5px;*/
+    padding-top: 5px;
+}
+.glyphiconDanger {
+    color:red;
 }
