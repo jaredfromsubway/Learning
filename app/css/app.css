@@ -2,6 +2,11 @@
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+.user-stat-list {
+    height: 345px;
+    overflow-y: scroll;
+
+}
 .user-stat-item {
     padding: 10px;
 }

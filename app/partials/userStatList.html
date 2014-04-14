@@ -1,10 +1,10 @@
-<div class="list-group">
+<div class="list-group user-stat-list">
     <a href="#" class="list-group-item user-stat-item" ng-repeat="userStatItem in userStatItems | orderBy: 'health'">
         <h4 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h4>
         <table>
             <tr>
                 <td>
-                    <img class="user-stat-avatar img-rounded img-responsive" src="http://f.thumbs.redditmedia.com/VJbOG83hmKRL1yeq.jpg" alt="avatar">
+                    <img class="user-stat-avatar img-rounded img-responsive" ng-src="{{userStatItem.avatarPath}}" alt="avatar">
                 </td>
                 <td class="user-stat-details-area">
                     <table>

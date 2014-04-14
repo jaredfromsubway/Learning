@@ -4,20 +4,39 @@
         "potsBrewed": 7,
         "firstName": "Justin",
         "lastName": "Fox",
-        "health": 74
+        "health": 74,
+        "avatarPath": "img/avatar.jpg"
     },
     {
         "cupsConsumed": 14,
         "potsBrewed": 10,
         "firstName": "Kyle",
         "lastName": "McGuire",
-        "health": 100
+        "health": 100,
+        "avatarPath": "img/avatar.jpg"
     },
     {
         "cupsConsumed": 12,
         "potsBrewed": 14,
         "firstName": "Stu",
         "lastName": "Bowring",
-        "health": 0
+        "health": 0,
+        "avatarPath": "img/avatar.jpg"
+    },
+    {
+        "cupsConsumed": 3,
+        "potsBrewed": 5,
+        "firstName": "Hugh",
+        "lastName": "Jass",
+        "health": 14,
+        "avatarPath": "img/avatar.jpg"
+    },
+    {
+        "cupsConsumed": 7,
+        "potsBrewed": 14,
+        "firstName": "Pat",
+        "lastName": "MacCrotch",
+        "health": 43,
+        "avatarPath": "img/avatar.jpg"
     }
 ]

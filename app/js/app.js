@@ -20,6 +20,10 @@ angular.module('coffeeTime', [
                     '': {
                         templateUrl: 'partials/home.html'
                     },
+                    'coffeeCarousel@home':{
+                        templateUrl: 'partials/coffeeCarousel.html',
+                        controller: 'coffeeCarousel'
+                    },
                     'userStatList@home': {
                         templateUrl: 'partials/userStatList.html',
                         controller: 'userStatListController'

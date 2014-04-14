@@ -2,7 +2,7 @@
 
 angular.module('coffeeTimeControllers', [])
     .controller('userStatListController', ['$scope','$stateParams', 'userStatList', function($scope, $stateParams, userStatList){
-        this.getHealthIcons = function(iRelativeHealth){
+        this.getHealthIconsMeta = function(iRelativeHealth){
             var aIcons = [];
             var iStep = 10;
             for (var i = iStep; i <= 100; i = i + iStep){
@@ -21,11 +21,14 @@ angular.module('coffeeTimeControllers', [])
 
         angular.forEach(userStatList, function (value, key) {
             userStatList[key].fullName = userStatList[key].firstName + ' ' + userStatList[key].lastName;
-            userStatList[key].healthIconsMeta = this.getHealthIcons(userStatList[key].health);
+            userStatList[key].healthIconsMeta = this.getHealthIconsMeta(userStatList[key].health);
         }, this);
         $scope.userStatItems = userStatList;
     }])
 
+    .controller('coffeeCarousel', ['$scope', '$stateParams', function($scope, $stateParams){
+        $scope.userUploadedImagePaths = ['img/coffee1.jpg', 'img/coffee2.jpg', 'img/coffee3.jpg'];
+    }])
 
 
     .controller('userStatItemController', ['$scope','$stateParams', 'userStatItem', function($scope, $stateParams, userStatItem){
