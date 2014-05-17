@@ -1,8 +1,13 @@
-<div>
-    <carousel interval="5000">
-        <slide ng-repeat="imagePath in userUploadedImagePaths" active="slide.active">
-            <img ng-src="{{imagePath}}" style="width:100%; height:auto;">
-            <!--<div class="carousel-caption"></div>-->
-        </slide>
-    </carousel>
+<!--interval="5000"-->
+<div carousel  >
+    <slide ng-repeat="imagePath in userUploadedImagePaths" active="slide.active" >
+        <div style="overflow:hidden;">
+            <img ng-src="{{imagePath}}" style="width:100%;" alt="First slide">
+            <div class="carousel-caption">
+                <h4>Submitted by someuse</h4>
+            </div>
+        </div>
+    </slide>
 </div>
+
+

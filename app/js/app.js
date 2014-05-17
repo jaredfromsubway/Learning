@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('coffeeTime', [
+    'ngAnimate',
     'ui.router',
     'ui.bootstrap',
     'coffeeTimeControllers',
@@ -9,7 +10,17 @@ angular.module('coffeeTime', [
     .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
         $stateProvider
-            .state('home', {
+            .state('root',{
+                url: '',
+                abstract: true,
+                views: {
+                    'header': {
+                        templateUrl: 'partials/header.html'
+                    }
+                }
+            })
+
+            .state('root.home', {
                 url: '/home',
                 resolve: {
                     userStatList: ['userStatListService', function (userStatListService) {
@@ -17,20 +28,56 @@ angular.module('coffeeTime', [
                     }]
                 },
                 views: {
-                    '': {
+                    'container@': {
                         templateUrl: 'partials/home.html'
                     },
-                    'coffeeCarousel@home':{
+                    'coffeeCarousel@root.home':{
                         templateUrl: 'partials/coffeeCarousel.html',
                         controller: 'coffeeCarousel'
                     },
-                    'userStatList@home': {
+                    'userStatList@root.home': {
                         templateUrl: 'partials/userStatList.html',
                         controller: 'userStatListController'
                     }
                 }
             })
-            .state('about', {
-                templateUrl: 'partials/about.html'
+
+            .state('root.auth', {
+                abstract: true,
+                views: {
+                    'container@': {
+                        templateUrl: 'partials/auth.html'
+                    }
+                }
+            })
+
+            .state('root.auth.login', {
+                url: '/login',
+                views: {
+                    'authHeader': {
+                        templateUrl: 'partials/auth/login/header.html'
+                    },
+                    'authFooter': {
+                        templateUrl: 'partials/auth/login/footer.html'
+                    }
+                }
+            })
+
+            .state('root.auth.signup', {
+                url: '/singup',
+                views: {
+                    'authHeader': {
+                        templateUrl: 'partials/auth/signup/header.html'
+                    }
+                }
+            })
+
+            .state('root.about', {
+                url: '/about',
+                views: {
+                    'container@': {
+                        templateUrl: 'partials/about.html'
+                    }
+                }
             })
     }]);

@@ -4,46 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CoffeeTime</title>
+    <link href='http://fonts.googleapis.com/css?family=Coda+Caption:800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css"/>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.css"/>
     <!--<link rel="stylesheet" href="css/flatly.css"/>-->
+    <link rel="stylesheet" href="css/carousel.css"/>
+    <link rel="stylesheet" href="css/minimalCircleButton.css"/>
     <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-
-<div class="container">
-    <div class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" ui-sref=".about">About</a>
-            </div>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <span class="nav navbar-nav navbar-right"></span>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="http://getbootstrap.com/examples/navbar/">login / signup</a></li>
-                </ul>
-            </div>
-        </div>
+    <div ui-view="header"></div>
+    <div class="ui-view-container">
+        <div class="container ui-view-container" ui-view="container"></div>
     </div>
+    <div id="footer" class="text-center">This project is incredibly stupid.  Make it less incredibly stupid by contributing on <a href="#" >github</a>.</div>
 
-    <!-- Main component for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <h1 class="text-center"><a ui-sref=".home">CoffeeTime</a></h1>
-    </div>
-    <div ui-view></div>
-</div>
 
-  <script src="../bower_components/angular/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.14/angular.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.14/angular-animate.min.js"></script>
+    <!-- UI-Router -->
+    <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
   <script src="js/lib/ui-bootstrap.min.js"></script>
   <script src="js/lib/angular-resource.js"></script>
-  <script src="js/lib/ui-router.min.js"></script>
+  <!--<script src="js/lib/ui-router.min.js"></script>-->
+    <!--<script src="js/lib/angular-animate.js"></script>-->
 
   <script src="js/controllers/userStatControllers.js"></script>
   <script src="js/services/userStatService.js"></script>

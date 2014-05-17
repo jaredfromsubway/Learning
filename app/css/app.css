@@ -2,14 +2,13 @@
 .nav, .pagination, .carousel, .panel-title a {
     cursor: pointer;
 }
+
 .user-stat-list {
-    height: 345px;
+    height: 366px;
     overflow-y: scroll;
 
 }
-.user-stat-item {
-    padding: 10px;
-}
+
 .user-stat-avatar {
     width: 66px;
     height: 66px;
@@ -38,6 +37,142 @@ td.user-stat-health {
     width: 100%;
     padding-top: 5px;
 }
+.user-stat-item span.glyphicon {
+    padding-left: 22px;
+}
+.user-stat-item span.glyphicon {
+    font-size: 48pt;
+}
+.user-stat-item span.glyphicon span.healthMask{
+    position:absolute;
+    left: 0;
+    right: -3px;
+    background: white;
+    height: 0%;
+    opacity: .86;
+}
+
+
+/*.user-stat-item span.glyphicon:after {
+    content: '';
+    position:absolute;
+    display:block;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    color: white;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}*/
+@media (max-width: 992px) {
+    .user-stat-list {
+        height: 309px;
+    }
+    .user-stat-item span.glyphicon {
+        font-size: 34pt;
+        padding-left: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .user-stat-item span.glyphicon {
+        font-size: 26pt;
+        padding-left: 8px;
+    }
+    .user-stat-list {
+        height: 277px;
+    }
+}
 .glyphiconDanger {
     color:red;
 }
+
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+body {
+    margin-bottom: 60px;
+}
+#footer {
+    background-color: #eeeeee;
+    bottom: 0;
+    height: 30px;
+    position: absolute;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.ui-view-container.ng-enter {
+    -webkit-animation: fadeInLeftBig 600ms;
+    -moz-animation: fadeInLeftBig 600ms;
+    -ms-animation: fadeInLeftBig 600ms;
+    animation: fadeInLeftBig 600ms;
+}
+
+.auth-container.ng-enter {
+    -webkit-animation: fadeIn 600ms;
+    -moz-animation: fadeIn 600ms;
+    -ms-animation: fadeIn 600ms;
+    animation: fadeIn 600ms;
+}
+
+
+
+
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+    line-height: 300%;
+}
+
+.omb_login .omb_loginOr {
+    position: relative;
+    font-size: 1.5em;
+    color: #aaa;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -0.6em;
+    margin-left: -1.5em;
+    background-color: white;
+    width: 3em;
+    text-align: center;
+}
+
+.omb_login .omb_loginForm .input-group.i {
+    width: 2em;
+}
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+}
+
+
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+        margin-top:10px;
+    }
+}
+
+
+

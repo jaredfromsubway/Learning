@@ -1,0 +1,140 @@
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*//*
+
+.well[ui-view]{
+    height: 65px;
+}
+
+.ui-view-container {
+    position: relative;
+}
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+    position: absolute;
+    left: 0;
+    right: 0;
+    -webkit-transition:all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    -o-transition:all .5s ease-in-out;
+    transition:all .5s ease-in-out;
+}
+
+[ui-view].ng-enter {
+    opacity: 0;
+    -webkit-transform:scale3d(0.5, 0.5, 0.5);
+    -moz-transform:scale3d(0.5, 0.5, 0.5);
+    transform:scale3d(0.5, 0.5, 0.5);
+}
+
+[ui-view].ng-enter-active {
+    opacity: 1;
+    -webkit-transform:scale3d(1, 1, 1);
+    -moz-transform:scale3d(1, 1, 1);
+    transform:scale3d(1, 1, 1);
+}
+
+[ui-view].ng-leave {
+    opacity: 1;
+    */
+/*padding-left: 0px;*//*
+
+    -webkit-transform:translate3d(0, 0, 0);
+    -moz-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+}
+
+[ui-view].ng-leave-active {
+    opacity: 0;
+    */
+/*padding-left: 100px;*//*
+
+    -webkit-transform:translate3d(100px, 0, 0);
+    -moz-transform:translate3d(100px, 0, 0);
+    transform:translate3d(100px, 0, 0);
+}*/
+
+/*animations*/
+/*
+.ui-view-container {
+    position: relative;
+}
+.well[ui-view]{
+    height: 65px;
+}
+.view-frame.ng-enter, .view-frame.ng-leave {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.view-frame.ng-enter {
+    -webkit-animation: 0.5s fade-in;
+    -moz-animation: 0.5s fade-in;
+    -o-animation: 0.5s fade-in;
+    animation: 0.5s fade-in;
+    z-index: 100;
+}
+
+.view-frame.ng-leave {
+    -webkit-animation: 0.5s fade-out;
+    -moz-animation: 0.5s fade-out;
+    -o-animation: 0.5s fade-out;
+    animation: 0.5s fade-out;
+    z-index:99;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-moz-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}*/
+
+.slide {
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+    -moz-transition: -moz-transform .7s ease-in-out;
+    -o-transition: -o-transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.slide.ng-enter {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    overflow: hidden;
+}
+
+.slide.ng-enter.ng-enter-active, .slide.ng-leave {
+    position: absolute;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    overflow: hidden;
+}
+
+.slide.ng-leave.ng-leave-active {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    overflow: hidden;
+}

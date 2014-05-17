@@ -1,31 +1,43 @@
+<!--<div class="list-group user-stat-list">-->
+    <!--<a href="#" class="list-group-item user-stat-item" ng-repeat="userStatItem in userStatItems | orderBy: 'health'">-->
+        <!--<h4 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h4>-->
+        <!--<table>-->
+            <!--<tr>-->
+                <!--<td>-->
+                    <!--<img class="user-stat-avatar img-rounded img-responsive" ng-src="{{userStatItem.avatarPath}}" alt="avatar">-->
+                <!--</td>-->
+                <!--<td class="user-stat-details-area">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td class="user-stat-label">Cups consumed:</td>-->
+                            <!--<td class="user-stat-value">{{userStatItem.cupsConsumed}}</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="user-stat-label">Pots brewed:</td>-->
+                            <!--<td class="user-stat-value">{{userStatItem.potsBrewed}}</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td colspan="2" class="user-stat-health">-->
+                                <!--<span ng-repeat="healthIconMeta in userStatItem.healthIconsMeta">-->
+                                     <!--<span class="glyphicon glyphicon-eye-open" ng-style="{opacity: healthIconMeta.opacity}" ng-class="{glyphiconDanger: !healthIconMeta.hasRelativeHealth}"></span>-->
+                                <!--</span>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</table>-->
+    <!--</a>-->
+<!--</div>-->
 <div class="list-group user-stat-list">
     <a href="#" class="list-group-item user-stat-item" ng-repeat="userStatItem in userStatItems | orderBy: 'health'">
-        <h4 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h4>
-        <table>
-            <tr>
-                <td>
-                    <img class="user-stat-avatar img-rounded img-responsive" ng-src="{{userStatItem.avatarPath}}" alt="avatar">
-                </td>
-                <td class="user-stat-details-area">
-                    <table>
-                        <tr>
-                            <td class="user-stat-label">Cups consumed:</td>
-                            <td class="user-stat-value">{{userStatItem.cupsConsumed}}</td>
-                        </tr>
-                        <tr>
-                            <td class="user-stat-label">Pots brewed:</td>
-                            <td class="user-stat-value">{{userStatItem.potsBrewed}}</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="user-stat-health">
-                                <span ng-repeat="healthIconMeta in userStatItem.healthIconsMeta">
-                                     <span class="glyphicon glyphicon-eye-open" ng-style="{opacity: healthIconMeta.opacity}" ng-class="{glyphiconDanger: !healthIconMeta.hasHealth}"></span>
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+        <h3 class="list-group-item-heading text-center">{{userStatItem.fullName}}</h3>
+        <div class="text-center">
+        <span ng-repeat="healthIconMeta in userStatItem.healthIconsMeta">
+             <span class="glyphicon glyphicon-eye-open">
+                 <span class="healthMask" ng-style="{height: healthIconMeta.healthPercentage}">&nbsp</span>
+             </span>
+        </span>
+        </div>
     </a>
 </div>

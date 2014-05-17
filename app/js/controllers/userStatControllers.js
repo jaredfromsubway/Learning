@@ -7,12 +7,15 @@ angular.module('coffeeTimeControllers', [])
             var iStep = 10;
             for (var i = iStep; i <= 100; i = i + iStep){
                 var oIcon = {};
-                oIcon.hasHealth = iRelativeHealth > i - iStep ? true : false;
-                oIcon.opacity = 1;
-                if (oIcon.hasHealth && iRelativeHealth < i){
-                    console.log(iRelativeHealth);
-                    console.log(i);
-                    oIcon.opacity = (iStep - (i % iRelativeHealth)) / iStep;
+                oIcon.hasRelativeHealth = iRelativeHealth > i - iStep ? true : false;
+                if (oIcon.hasRelativeHealth && iRelativeHealth < i){
+                    oIcon.healthPercentage = (i % iRelativeHealth) * 10 + '%';
+                }
+                else if (!oIcon.hasRelativeHealth){
+                    oIcon.healthPercentage = '100%';
+                }
+                else{
+                    oIcon.healthPercentage = '0%';
                 }
                 aIcons.push(oIcon);
             }
